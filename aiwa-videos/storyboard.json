@@ -1,0 +1,7 @@
+{"version":1,"format":"16:9 1920x1080","seconds":24,"concept":"présentation de la page : accroche, aperçu, qualités, mobile, appel à l'action",
+"scenes":[
+{"id":"hook","seconds":3,"headline":"Salut, je suis Yo.","text":"","media":null},
+{"id":"hero","seconds":5,"headline":"Simple. Sobre. Rapide.","text":"Un seul fichier, aucune dépendance, lisible partout.","media":"media/hero-desktop.png"},
+{"id":"about","seconds":5,"headline":"Simple · Adaptable · Accessible","text":"Contrastes élevés, navigation au clavier, animations réduites respectées.","media":"media/about-desktop.png"},
+{"id":"mobile","seconds":6,"headline":"Pensée d'abord pour le mobile","text":"Elle s'étend proprement sur grand écran.","media":["media/hero-mobile.png","media/contact-desktop.png"]},
+{"id":"cta","seconds":5,"headline":"Yo","text":"","cta":"theodoreyong9.github.io/Yo"}]}
