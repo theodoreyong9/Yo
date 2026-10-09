@@ -1,7 +1,7 @@
 name: Deploy Pages
 on:
   push:
-    branches: [main]
+    branches: [main, 'aiwa/20261009-223535']   # GitHub's github-pages environment only lets the repository's DEFAULT branch deploy; here it is this one
   workflow_dispatch:
 permissions:
   contents: read
