@@ -1,0 +1,31 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>
+:root{--bg:#0b0b0f;--ink:#f2f0ea;--mut:#9a9aa3;--acc:#ffb347}
+html,body{margin:0;background:#000;overflow:hidden}
+#st{position:relative;width:100vw;height:100vh;background:var(--bg);color:var(--ink);font-family:"Liberation Sans",Arial,sans-serif;overflow:hidden}
+#st:before{content:"";position:absolute;inset:0;background:radial-gradient(70% 35% at 70% 25%,rgba(255,179,71,.18),transparent 70%)}
+.sc{position:absolute;inset:0;opacity:0}
+.tx{position:absolute;left:8vw;right:8vw;text-transform:uppercase}
+h1{margin:0;font-weight:800;letter-spacing:-.03em;line-height:1.02;font-size:5.4vw}
+h1.big{font-size:17vw}
+p{margin:1.6vh 0 0;color:var(--mut);font-size:3.6vw;line-height:1.3;text-transform:none}
+.shot{position:absolute;left:50%;transform:translateX(-50%);height:50vh;border:1px solid #2a2a33;box-shadow:0 4vh 10vh rgba(0,0,0,.7);border-radius:3vw}
+.cta{display:inline-block;margin-top:4vh;padding:1.4vh 5vw;border:2px solid var(--ink);font-size:4.2vw;text-transform:none}
+em{color:var(--acc);font-style:normal}
+</style></head><body><div id="st"></div><script>
+const S=[
+{s:3,h:'Salut,<br>je suis <em>Yo</em>.',big:1,center:1},
+{s:5,h:'Simple. Sobre. <em>Rapide.</em>',p:'Un seul fichier, aucune dépendance, lisible partout.',img:'media/m-hero.png'},
+{s:5,h:'Simple · Adaptable · <em>Accessible</em>',p:'Contrastes élevés, navigation au clavier, animations réduites respectées.',img:'media/m-about.png'},
+{s:4,h:'Un formulaire de <em>contact</em>',p:'Pensée d\'abord pour le mobile.',img:'media/m-contact.png'},
+{s:3,h:'<em>Yo</em>',big:1,center:1,cta:'theodoreyong9.github.io/Yo'}];
+const st=document.getElementById('st');let a=0;
+const E=S.map(c=>{c.t0=a;a+=c.s;const d=document.createElement('div');d.className='sc';
+ let h=`<div class="tx" style="${c.center?'top:50%;transform:translateY(-50%)':'top:11vh'}"><h1 class="${c.big?'big':''}">${c.h}</h1>${c.p?`<p>${c.p}</p>`:''}${c.cta?`<div class="cta">${c.cta}</div>`:''}</div>`;
+ if(c.img)h+=`<img class="shot" src="${c.img}" style="top:34vh">`;
+ d.innerHTML=h;st.append(d);return d});
+const ease=x=>1-Math.pow(1-Math.min(1,Math.max(0,x)),3);
+window.TOTAL_SECONDS=a;
+window.render=t=>S.forEach((c,i)=>{const l=t-c.t0,i2=ease(l/.5),o=ease((c.s-l)/.4),v=l<0||l>c.s?0:Math.min(i2,o);
+ E[i].style.opacity=v;E[i].style.transform=`translateY(${(1-i2)*2}vh) scale(${1+.03*(l/c.s)})`});
+window.render(0);
+</script></body></html>

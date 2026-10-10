@@ -1,0 +1,7 @@
+{"version":1,"format":"9:16 1080x1920","seconds":20,"concept":"présentation de la page sur mobile : accroche, aperçu, qualités, contact, appel à l'action",
+"scenes":[
+{"id":"hook","seconds":3,"headline":"Salut, je suis Yo."},
+{"id":"hero","seconds":5,"headline":"Simple. Sobre. Rapide.","text":"Un seul fichier, aucune dépendance, lisible partout.","media":"media/m-hero.png"},
+{"id":"about","seconds":5,"headline":"Simple · Adaptable · Accessible","text":"Contrastes élevés, navigation au clavier, animations réduites respectées.","media":"media/m-about.png"},
+{"id":"contact","seconds":4,"headline":"Un formulaire de contact","text":"Pensée d'abord pour le mobile.","media":"media/m-contact.png"},
+{"id":"cta","seconds":3,"headline":"Yo","cta":"theodoreyong9.github.io/Yo"}]}
