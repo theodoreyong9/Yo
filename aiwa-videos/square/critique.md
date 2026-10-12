@@ -1,0 +1,7 @@
+# Critique (étape 6) — deux tours, par un agent neuf qui ne voyait que la planche-contact et le brief
+
+**Tour 1** : accroche 4, message 3, rythme 3, mouvement 3, lisibilité 2, direction artistique 4, son 3, honnêteté 3, appel à l'action 3 ; arc 3, cohérence 4, énergie 3, voix 3, fin 3.
+Corrigé : unité « octets » affichée avec le compteur (le « 4 196 » vu était une image prise pendant le comptage, la valeur finale est 5 424), cartes réelles en gros plan qui défilent (capture 2× de la vraie page), réponse du formulaire en grand, plan « bilan » redondant supprimé, lueur ambre réduite, URL plus grosse, cercle qui dérive derrière « Dis salut. », durée du brief alignée (19,8 s).
+
+**Tour 2** (planche `preview/sheet.png`) : accroche 5, clarté 4, rythme 4, mouvement 4, lisibilité 4, direction artistique 5, son et synchro 3, honnêteté 4, appel à l'action 4 ; arc 4, cohérence 4, énergie 4, voix 3, fin 4.
+Restent sous 4 : **son/synchro (3)** et **voix (3)**, qui ne se jugent pas sur des images fixes : la musique est un rythme généré et la voix est de synthèse (provisoires, dits dans le rapport). J'ai recalé « Elle s'ouvre. Elle répond. » sur le formulaire (la réponse ambre tombe sur « répond ») et agrandi « UN SEUL FICHIER » et les étiquettes. Pas de troisième tour : le reste est limité par le son provisoire, pas par l'image. Je n'ai pas écouté le film (pas de lecteur audio ici) : le silence avant « Dis salut. » est vérifié par construction (volume à 5 % entre 15,1 et 16,3 s), pas à l'oreille.
