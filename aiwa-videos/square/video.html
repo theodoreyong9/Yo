@@ -7,14 +7,14 @@
 <script>
 const A = '#ffb347', MONO = '"Liberation Mono", monospace';
 window.THEME = { bg: '#0b0b0f', ink: '#f2f0ea', muted: '#9a9aa3', accent: A, font: '"Inter Display", Inter, "Liberation Sans", Arial, sans-serif', grain: 0.02, vignette: 0.25 };
-const BLOBS = ['rgba(255,179,71,.20)', 'rgba(255,140,60,.08)', 'rgba(20,20,26,.5)'];
+const BLOBS = ['rgba(255,179,71,.13)', 'rgba(255,140,60,.08)', 'rgba(20,20,26,.5)'];
 const nightBlobs = { type: 'blobs', colors: BLOBS, base: '#0b0b0f' };
-const FORM_CSS = `.f{font-family:"Inter",sans-serif;color:#f2f0ea;width:1000px;height:640px;box-sizing:border-box;padding:48px;border:2px solid #24242c;background:#0e0e13}
+const FORM_CSS = `.f{font-family:"Inter",sans-serif;color:#f2f0ea;width:1000px;height:720px;box-sizing:border-box;padding:48px;border:2px solid #24242c;background:#0e0e13}
 .f label{display:block;font-size:30px;color:#9a9aa3;margin-bottom:10px}
 .f .i{border:2px solid #24242c;height:78px;font-size:38px;padding:0 22px;line-height:78px;margin-bottom:30px;box-sizing:border-box}
 .f .t{height:150px;line-height:1.3;padding-top:18px;border:2px solid #24242c;font-size:38px;padding-left:22px;box-sizing:border-box;margin-bottom:30px}
 .f .b{display:inline-block;border:2px solid #f2f0ea;padding:16px 40px;font-size:30px;letter-spacing:.14em;text-transform:uppercase}
-.f .m{margin-top:26px;font-size:34px;color:#ffb347;min-height:44px}
+.f .m{margin-top:22px;font-size:46px;line-height:1.2;color:#ffb347;min-height:112px}
 .f .c{display:inline-block;width:3px;height:.9em;background:#ffb347;vertical-align:-.1em}`;
 const typed = (s, t, a, b) => s.slice(0, Math.round(s.length * Math.min(1, Math.max(0, (t - a) / (b - a)))));
 window.SHOTS = [
@@ -29,9 +29,9 @@ window.SHOTS = [
   ] },
   // 3 · LE POIDS
   { seconds: 2.5, transition: { type: 'push', seconds: 0.4 }, bg: nightBlobs, layers: [
-    { type: 'text', text: 'UN SEUL FICHIER', size: [3.6, 3.6], weight: 700, spacing: 0.2, color: '#9a9aa3', x: 50, y: 24, at: 0.1, mode: 'chars', stagger: 0.02, effect: 'fade' },
-    { type: 'counter', from: 0, to: 5424, at: 0.25, dur: 1.4, sep: '\u202f', size: [22, 22], weight: 900, color: A, x: 50, y: 50 },
-    { type: 'text', text: 'octets.', size: [10, 10], weight: 900, x: 50, y: 76, at: 1.5, effect: 'drop', mode: 'words' },
+    { type: 'text', text: 'UN SEUL FICHIER', size: [3.6, 3.6], weight: 700, spacing: 0.2, color: '#c9c9d0', x: 50, y: 24, at: 0.1, mode: 'chars', stagger: 0.02, effect: 'fade' },
+    { type: 'counter', from: 0, to: 5424, at: 0.2, dur: 1.0, sep: '\u202f', size: [22, 22], weight: 900, color: A, x: 50, y: 50 },
+    { type: 'text', text: 'octets.', size: [10, 10], weight: 900, x: 50, y: 74, at: 0.3, effect: 'rise', mode: 'words' },
   ] },
   // 4 · ZÉRO, ZÉRO
   { seconds: 2, transition: { type: 'push-up', seconds: 0.35 }, bg: { type: 'gradient', colors: ['#16130e', '#0b0b0f'], angle: 200 }, layers: [
@@ -41,15 +41,15 @@ window.SHOTS = [
     { type: 'text', text: 'requête\nexterne', size: [9, 9], weight: 900, align: 'left', x: 63, y: 72, w: 62, at: 0.85, effect: 'mask', mode: 'lines', stagger: 0.12 },
   ] },
   // 5 · LA VRAIE PAGE, LES 3 CARTES
-  { seconds: 3, transition: { type: 'wipe', seconds: 0.4 }, bg: nightBlobs, layers: [
+  { seconds: 2.6, transition: { type: 'wipe', seconds: 0.4 }, bg: nightBlobs, layers: [
     { type: 'text', text: '3 cartes.', size: [9.5, 9.5], weight: 900, x: 50, y: 11, at: 0.15, mode: 'words', effect: 'rise', accent: { '3': A } },
-    { type: 'page', src: 'page-full.png', pageW: 1440, viewH: 810, scroll: [800, 880], scrollAt: 0.2, scrollDur: 2.4, frame: 'browser', x: 50, y: 56, w: 94, at: 0.1, dur: 0.5, enter: 'rise',
-      cam: { from: { s: 1, x: 0, y: 0 }, to: { s: 1.45, x: 0, y: 7 }, at: 0.2, dur: 2.7 } },
+    { type: 'image', src: 'cards-crop.png', x: 50, y: 56, w: 250, enter: 'fade', at: 0.1, dur: 0.4, radius: 12,
+      cam: { from: { s: 1, x: 81 }, to: { s: 1, x: -81 }, at: 0.15, dur: 2.3 } },
   ] },
   // 6 · LE FORMULAIRE RÉPOND
-  { seconds: 3.5, transition: { type: 'iris', seconds: 0.45 }, bg: { type: 'gradient', colors: ['#14141a', '#0b0b0f'], angle: 120, drift: true }, layers: [
+  { seconds: 4, transition: { type: 'iris', seconds: 0.45 }, bg: { type: 'gradient', colors: ['#14141a', '#0b0b0f'], angle: 120, drift: true }, layers: [
     { type: 'text', text: '1 formulaire.', size: [9.5, 9.5], weight: 900, x: 50, y: 10, at: 0.1, mode: 'words', effect: 'mask', accent: { '1': A } },
-    { type: 'html', id: 'form', css: FORM_CSS, design: [1000, 640], w: 86, x: 50, y: 58, at: 0.15, dur: 0.6, enter: 'scale',
+    { type: 'html', id: 'form', css: FORM_CSS, design: [1000, 720], w: 86, x: 50, y: 58, at: 0.15, dur: 0.6, enter: 'scale',
       cam: { from: { s: 1 }, to: { s: 1.08 }, at: 0.2, dur: 3.2 },
       markup: '<div class="f"><label>Nom</label><div class="i" id="fn"></div><label>Message</label><div class="t" id="fm"></div><span class="b" id="fb">Envoyer</span><div class="m" id="fr"></div></div>',
       tick: (r, t, M) => {
@@ -58,27 +58,21 @@ window.SHOTS = [
         r.querySelector('#fm').innerHTML = m + (t >= 1.0 && t < 1.8 ? '<span class="c"></span>' : '');
         const press = t > 1.9 && t < 2.15, b = r.querySelector('#fb');
         b.style.background = press ? '#f2f0ea' : 'transparent'; b.style.color = press ? '#0b0b0f' : '#f2f0ea';
-        r.querySelector('#fr').textContent = typed('Merci Ana, message bien reçu (démo locale).', t, 2.2, 3.0);
+        r.querySelector('#fr').textContent = typed('Merci Ana, message bien reçu (démo locale).', t, 2.2, 2.9);
       } },
   ] },
   // 7 · MOBILE
-  { seconds: 3, transition: { type: 'slice', seconds: 0.4 }, bg: nightBlobs, layers: [
+  { seconds: 2.6, transition: { type: 'slice', seconds: 0.4 }, bg: nightBlobs, layers: [
     { type: 'text', text: "Pensée d'abord\npour le\nmobile.", size: [8.4, 8.4], weight: 900, align: 'left', x: 33, y: 50, w: 52, mode: 'lines', effect: 'mask', stagger: 0.16, at: 0.1, accent: { 'mobile.': A } },
-    { type: 'page', src: 'page-mobile.png', pageW: 390, viewH: 780, scroll: [0, 1250], scrollAt: 0.2, scrollDur: 2.6, frame: 'phone', x: 76, y: 52, w: 33, at: 0.1, dur: 0.6, enter: 'right',
+    { type: 'page', src: 'page-mobile.png', pageW: 390, viewH: 780, scroll: [0, 1250], scrollAt: 0.2, scrollDur: 2.3, frame: 'phone', x: 76, y: 52, w: 33, at: 0.1, dur: 0.6, enter: 'right',
       cam: { from: { s: 1, r: 4 }, to: { s: 1.03, r: -2 }, at: 0.1, dur: 2.9 } },
-  ] },
-  // 8 · BILAN
-  { seconds: 2, transition: { type: 'push', seconds: 0.3 }, bg: { type: 'solid', color: '#0b0b0f' }, layers: [
-    { type: 'text', text: '1 fichier', size: [10, 10], weight: 900, align: 'left', x: 50, y: 20, w: 76, at: 0.0, mode: 'words', effect: 'mask', accent: { '1': A } },
-    { type: 'text', text: '0 bibliothèque', size: [10, 10], weight: 900, align: 'left', x: 50, y: 40, w: 76, at: 0.45, mode: 'words', effect: 'mask', accent: { '0': A } },
-    { type: 'text', text: '3 cartes', size: [10, 10], weight: 900, align: 'left', x: 50, y: 60, w: 76, at: 0.9, mode: 'words', effect: 'mask', accent: { '3': A } },
-    { type: 'text', text: '1 formulaire', size: [10, 10], weight: 900, align: 'left', x: 50, y: 80, w: 76, at: 1.35, mode: 'words', effect: 'mask', accent: { '1': A } },
   ] },
   // 9 · APPEL À L'ACTION
   { seconds: 4.2, transition: { type: 'fade', seconds: 0.35 }, bg: nightBlobs, layers: [
     { type: 'text', text: 'Dis\nsalut.', size: [20, 20], weight: 900, mode: 'lines', effect: 'mask', stagger: 0.18, at: 0.35, y: 40, accent: { 'salut.': A }, leading: 0.98 },
     { type: 'shape', kind: 'bar', x: 50, y: 69, w: 36, h: 0.5, color: A, at: 1.2, dur: 0.7, from: { s: 0 } },
-    { type: 'text', text: 'theodoreyong9.github.io/Yo', size: [3.7, 3.7], weight: 600, font: MONO, spacing: 0, x: 50, y: 77, at: 1.5, effect: 'type', mode: 'chars', stagger: 0.03 },
+    { type: 'shape', kind: 'circle', x: 50, y: 50, w: 95, h: 95, color: 'rgba(255,179,71,.07)', from: { s: 0.5, o: 0 }, at: 0.2, dur: 3.8 },
+    { type: 'text', text: 'theodoreyong9.github.io/Yo', size: [4.9, 4.9], weight: 600, font: MONO, spacing: 0, x: 50, y: 77, at: 1.5, effect: 'type', mode: 'chars', stagger: 0.03 },
   ] },
 ];
 </script>

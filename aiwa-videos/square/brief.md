@@ -4,7 +4,7 @@
 **UN message** : cette page tient en presque rien — et elle dit salut.
 **Ton** : sec, malin, un sourire. Jamais de superlatif.
 **Direction artistique** : prise dans la page — nuit #0b0b0f, ivoire #f2f0ea, ambre #ffb347 ; gros caractères noirs (Inter Display Black) ; compteurs en mono.
-**Format / durée** : 1:1, 1080×1080, 24 s, MP4 H.264 + AAC.
+**Format / durée** : 1:1, 1080×1080, 19,8 s, MP4 H.264 + AAC.
 **Appel à l'action** : « Dis salut. » + theodoreyong9.github.io/Yo.
 
 ## Stratégie (section 0 du guide)
